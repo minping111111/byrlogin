@@ -12,8 +12,8 @@ def login():
         r = requests.post(
             url="http://10.3.8.211/a11.htm",
             data = {
-                "DDDDD":studentID,
-                "upass":passwd,
+                "DDDDD":str(studentID),
+                "upass":str(passwd),
                 "AMKKey":"",
             },
         )
