@@ -2,18 +2,16 @@
 # -*- coding: utf-8 -*-
 import requests
 import sys
-studentID = ''
-passwd=''
 
-def login():
+def login(studentID,passwd):
     # My API (POST http://10.3.8.211/a11.htm)
     try:
         print "Login in ..."
         r = requests.post(
             url="http://10.3.8.211/a11.htm",
             data = {
-                "DDDDD":str(studentID),
-                "upass":str(passwd),
+                "DDDDD":studentID,
+                "upass":passwd,
                 "AMKKey":"",
             },
         )
@@ -40,7 +38,7 @@ def main():
     else:   
         studentID = raw_input("Please Input Your Student ID:\t")
         passwd = raw_input("Please Input Your Password:\t")
-        login()
+        login(studentID,passwd)
         
 
 if __name__ == '__main__':
