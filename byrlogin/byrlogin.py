@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 import requests
 import sys
+import getpass
+
 
 def login(studentID,passwd):
     # My API (POST http://10.3.8.211/a11.htm)
@@ -37,7 +39,7 @@ def main():
         logout()
     else:   
         studentID = raw_input("Please Input Your Student ID:\t")
-        passwd = raw_input("Please Input Your Password:\t")
+        passwd = getpass.getpass("Please Input Your Password:\t")
         login(studentID,passwd)
         
 
