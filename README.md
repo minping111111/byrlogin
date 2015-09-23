@@ -4,6 +4,10 @@
 ```
 pip install byrlogin
 ```
+###卸载
+```
+pip uninstall byrlogin
+```
 ###登录
 ![](http://i.imgur.com/Ax4QmuV.png)
 ###登出
